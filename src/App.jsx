@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <h1>İş ilan portalı</h1>
       <div className="header">
-        <div className="arama kutusu">
+        <div className="arama_kutusu">
           <input type="text" placeholder='iş ilanı arayın' />
           <button id="arama_butonu">Ara</button>
         </div>
