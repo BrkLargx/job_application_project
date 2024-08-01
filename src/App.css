@@ -34,16 +34,33 @@ body{
   outline: none;
 }
 
-.arama_kutusu button{
-  width: 75px;
-  height: 50px;
-  background-color: rgb(13, 105, 211);
-  color: white;
+.ilan {
+  padding: 16px;
+  margin: 16px 0px;
+  background: #92454518;
   border-radius: 8px;
-  border-color: rgb(13, 105, 211);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  outline: none;
-  border: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.ilan img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.ilan-baslik {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+
+.ilan-lokasyon,
+.ilan-kategori {
+  font-style: italic;
+  color: #555;
+}
+
+.ilan-listesi{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
