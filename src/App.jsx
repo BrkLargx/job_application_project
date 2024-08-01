@@ -1,22 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+import IlanList from './Components/IlanList';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [searchQuery, setSearchQuery] = useState('');
 
-  return (
-    <div className="app">
-      <h1>İş ilan portalı</h1>
-      <div className="header">
-        <div className="arama_kutusu">
-          <input type="text" placeholder='iş ilanı arayın' />
-          <button id="arama_butonu">Ara</button>
+    const handleSearchChange = (event) => {
+        setSearchQuery(event.target.value);
+    };
+
+    const handleSearchClick = () => {
+    };
+
+    return (
+        <div className="App">
+            <h1>İş İlan Portalı</h1>
+            <div className="header">
+                <div className="arama_kutusu">
+                    <input
+                        type="text"
+                        placeholder="İş İlanı Arayın"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+            </div>
+
+            <IlanList searchQuery={searchQuery} />
         </div>
-      </div>
-    </div>
-  )
+    );
 }
 
-export default App
+export default App;
